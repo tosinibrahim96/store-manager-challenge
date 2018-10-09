@@ -1,6 +1,4 @@
 body {
-	background: url("/images/1.jpg") no-repeat fixed center center;
-	background-size: cover;
 	font-family: Montserrat;
 }
 
@@ -9,7 +7,7 @@ body {
 	padding: 20px;
 	border-radius: 5px;
 	margin: 110px auto;
-	background: #fff;
+	background: transparent;
 	border-top: 5px solid #ff656c;
 }
 
@@ -77,6 +75,7 @@ body {
 	font-family: Montserrat;
 	outline: none;
 	cursor: pointer;
+	text-align: center;
 }
 
 .login:hover {
@@ -100,7 +99,7 @@ body {
 
 #hide {
 	cursor: pointer;
-	color: #08c400;
+	color: #ff656c;
 }
 
 #show {
@@ -112,6 +111,7 @@ body {
 .have-account {
 	text-align: center;
 	font-size: 14px;
+	color: #ff656c;
 }
 
 @media screen and (max-width: 500px) {

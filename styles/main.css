@@ -1,6 +1,111 @@
+/* Defining custom grid system */
+* {
+	box-sizing: border-box;
+}
+.row:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+[class*="col-"] {
+	float: left;
+	padding: 15px;
+}
+.col-1 {
+	width: 8.33%;
+}
+.col-2 {
+	width: 16.66%;
+}
+.col-3 {
+	width: 25%;
+}
+.col-4 {
+	width: 33.33%;
+}
+.col-5 {
+	width: 41.66%;
+}
+.col-6 {
+	width: 50%;
+}
+.col-7 {
+	width: 58.33%;
+}
+.col-8 {
+	width: 66.66%;
+}
+.col-9 {
+	width: 75%;
+}
+.col-10 {
+	width: 83.33%;
+}
+.col-11 {
+	width: 91.66%;
+}
+.col-12 {
+	width: 100%;
+}
+
+/* Page styling starts here */
 body {
 	font-family: Montserrat;
 }
+
+/*sidebar*/
+#sidebar {
+	position: fixed;
+	left: -200px;
+	background: #ff656c;
+	height: 100%;
+	width: 200px;
+	transition: 400ms;
+}
+
+#sidebar ul {
+	list-style: none;
+	margin-top: 30px;
+}
+
+#sidebar ul li {
+	width: 100%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #fff;
+}
+
+#sidebar ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+
+.toggle-btn {
+	position: absolute;
+	padding: 8px 8px;
+	left: 200;
+	background: #e1e1e1;
+	top: 10px;
+	cursor: pointer;
+}
+
+.toggle-btn span {
+	width: 30px;
+	height: 2px;
+	background: #444;
+	display: block;
+	margin-bottom: 6px;
+}
+.toggle-btn span:last-child {
+	margin-bottom: 0;
+}
+
+.active {
+	left: 00px !important;
+}
+
+/*End of sidebar*/
 
 .attendant-block {
 	width: 320px;
@@ -16,7 +121,6 @@ body {
 .password {
 	width: 100%;
 	height: 42px;
-	box-sizing: border-box;
 	border-radius: 5px;
 	border: 1px solid #ccc;
 	margin-bottom: 20px;
@@ -65,7 +169,6 @@ body {
 	width: 100%;
 	height: 40px;
 	background: #ff656c;
-	box-sizing: border-box;
 	border-radius: 5px;
 	border: 1px solid #e15960;
 	color: #fff;
@@ -112,6 +215,15 @@ body {
 	text-align: center;
 	font-size: 14px;
 	color: #ff656c;
+}
+
+.info-box-container {
+	display: flex;
+}
+
+.info-box {
+	background: #e15960;
+	margin: 1em;
 }
 
 @media screen and (max-width: 500px) {

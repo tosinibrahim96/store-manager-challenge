@@ -1,4 +1,5 @@
-const sidebar = document.querySelector(".toggle-btn");
+const togggleButton = document.querySelector(".toggle-btn");
+const sidebar = document.getElementById("sidebar");
 
 $(".admin-box").hide();
 $("#show").click(function() {
@@ -10,6 +11,9 @@ $("#hide").click(function() {
 	$(".admin-box").hide();
 });
 
-sidebar.addEventListener("click", toggleSidebar);
-toggleSidebar = () =>
-	document.getElementById("sidebar").classList.toggle("active");
+toggleSidebar = () => {
+	sidebar.classList.toggle("active");
+	sidebar.classList.toggle("show");
+};
+
+togggleButton.addEventListener("click", toggleSidebar);

@@ -2,111 +2,78 @@
 * {
 	box-sizing: border-box;
 }
-.row:after {
-	content: "";
-	clear: both;
-	display: block;
-}
-[class*="col-"] {
-	float: left;
-	padding: 15px;
-}
-.col-1 {
-	width: 8.33%;
-}
-.col-2 {
-	width: 16.66%;
-}
-.col-3 {
-	width: 25%;
-}
-.col-4 {
-	width: 33.33%;
-}
-.col-5 {
-	width: 41.66%;
-}
-.col-6 {
-	width: 50%;
-}
-.col-7 {
-	width: 58.33%;
-}
-.col-8 {
-	width: 66.66%;
-}
-.col-9 {
-	width: 75%;
-}
-.col-10 {
-	width: 83.33%;
-}
-.col-11 {
-	width: 91.66%;
-}
-.col-12 {
-	width: 100%;
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
 }
 
 /* Page styling starts here */
 body {
 	font-family: Montserrat;
+	background: #e2e1e059;
+}
+
+.left {
+	width: 17%;
+}
+
+.right {
+	width: 82%;
+}
+
+.wrapper {
+	display: flex;
+}
+
+#logo {
+	padding: 1em 0em;
+	text-align: center;
+	border-bottom: 1px solid #ffffff78;
+	text-transform: capitalize;
+	color: #fefffe;
 }
 
 /*sidebar*/
 #sidebar {
 	position: fixed;
-	left: -200px;
-	background: #ff656c;
-	height: 100%;
 	width: 200px;
-	transition: 400ms;
+	height: 100%;
+	background: #0b3954;
+	left: -200px;
+}
+
+#sidebar.active {
+	left: 0px;
 }
 
 #sidebar ul {
-	list-style: none;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 #sidebar ul li {
-	width: 100%;
-	padding: 10px 20px;
-	box-sizing: border-box;
-	border-bottom: 1px solid #fff;
+	color: #fefffe;
+	list-style-type: none;
+	text-transform: capitalize;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 15px 10px;
+	border-bottom: 1px solid #ffffff78;
 }
 
-#sidebar ul li a {
-	color: #fff;
-	text-decoration: none;
-	font-family: sans-serif;
-}
-
-.toggle-btn {
+#sidebar .toggle-btn {
 	position: absolute;
-	padding: 8px 8px;
-	left: 200;
-	background: #e1e1e1;
-	top: 10px;
-	cursor: pointer;
+	left: 210px;
+	top: 0px;
 }
 
-.toggle-btn span {
-	width: 30px;
-	height: 2px;
-	background: #444;
-	display: block;
-	margin-bottom: 6px;
+#sidebar .toggle-btn span {
+	display: none;
 }
-.toggle-btn span:last-child {
-	margin-bottom: 0;
-}
-
-.active {
-	left: 00px !important;
-}
-
 /*End of sidebar*/
 
+/*Login page*/
 .attendant-block {
 	width: 320px;
 	padding: 20px;
@@ -216,18 +183,266 @@ body {
 	font-size: 14px;
 	color: #ff656c;
 }
+/*End of Login page*/
 
-.info-box-container {
+/*dashboard info */
+
+.up-info-container,
+.down-info-container {
+	margin-top: 0.5em;
 	display: flex;
+	padding-bottom: 2em;
+	justify-content: space-between;
+	border-bottom: 1px solid #ccc;
 }
 
-.info-box {
-	background: #e15960;
-	margin: 1em;
+.container-title {
+	text-align: center;
+	background: #bcc9d0;
+	margin: 0 auto;
+	color: #fefefe;
+	width: 40%;
+	height: 50px;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 2em;
+	padding-top: 0.5em;
 }
 
-@media screen and (max-width: 500px) {
+h2:nth-child(1) {
+	margin-top: 0.5em;
+}
+
+.info-block {
+	width: 33%;
+	height: 150px;
+	background: #fff;
+	border-radius: 5px;
+	position: relative;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.info-block-header h3 {
+	text-align: center;
+	font-size: 15px;
+	font-weight: 400;
+	color: #fefffe;
+	text-transform: capitalize;
+	padding-top: 0.5em;
+}
+
+.info-block-header {
+	position: absolute;
+	width: 40%;
+	height: 40%;
+	padding: 0 0.5em;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.info-block-header:hover {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.info-block-header1 {
+	background: #e91e6370;
+}
+
+.info-block-header2 {
+	background: #b8d141;
+}
+
+.info-block-header3 {
+	background: #ff450085;
+}
+
+.info-block-header4 {
+	background: #7ccc63;
+}
+
+.info-block-header5 {
+	width: initial;
+	padding: 0 0.5em;
+	background: #8b9dab;
+}
+
+.info-block-header6 {
+	background: #ff6663;
+}
+
+.info-block-content {
+	position: absolute;
+	right: 5px;
+	text-transform: capitalize;
+	font-size: 18px;
+	text-align: center;
+	color: #214b63;
+}
+.info-block-content p {
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 2em;
+}
+
+#number-of-customers {
+	position: absolute;
+	right: 50px;
+}
+
+.info-block-footer {
+	width: 90%;
+	height: 20px;
+	position: absolute;
+	bottom: 10px;
+	left: 5%;
+	border-top: 1px solid #ccc;
+}
+
+.info-block-footer p {
+	color: #8b9dab;
+	font-size: 12px;
+	padding-top: 0.5em;
+}
+
+.info-block-footer .date {
+	float: right;
+}
+
+/* Responsive table styles */
+table {
+	border-spacing: 1;
+	border-collapse: collapse;
+	background: white;
+	border-radius: 6px;
+	overflow: hidden;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+table * {
+	position: relative;
+}
+table td,
+table th {
+	padding-left: 8px;
+}
+table thead tr {
+	height: 60px;
+	background: #214b63;
+	color: #fefefe;
+	font-size: 16px;
+}
+table tbody tr {
+	height: 48px;
+	border-bottom: 1px solid #e3f1d5;
+}
+table tbody tr:last-child {
+	border: 0;
+}
+table td,
+table th {
+	text-align: left;
+}
+table td.l,
+table th.l {
+	text-align: right;
+}
+table td.c,
+table th.c {
+	text-align: center;
+}
+table td.r,
+table th.r {
+	text-align: center;
+}
+
+@media screen and (max-width: 35.5em) {
+	table {
+		display: block;
+	}
+	table > *,
+	table tr,
+	table td,
+	table th {
+		display: block;
+	}
+	table thead {
+		display: none;
+	}
+	table tbody tr {
+		height: auto;
+		padding: 8px 0;
+	}
+	table tbody tr td {
+		padding-left: 45%;
+		margin-bottom: 12px;
+	}
+	table tbody tr td:last-child {
+		margin-bottom: 0;
+	}
+	table tbody tr td:before {
+		position: absolute;
+		font-weight: 700;
+		width: 40%;
+		left: 10px;
+		top: 0;
+	}
+	.table1 tbody tr td:nth-child(1):before {
+		content: "PRODUCT NAME";
+	}
+	.table1 tbody tr td:nth-child(2):before {
+		content: "PRODUCT TYPE";
+	}
+	.table1 tbody tr td:nth-child(3):before {
+		content: "QUANTITY";
+	}
+	.table1 tbody tr td:nth-child(4):before {
+		content: "PRICE";
+	}
+	.table1 tbody tr td:nth-child(5):before {
+		content: "ATTENDANT NAME";
+	}
+
+	.table2 tbody tr td:nth-child(1):before {
+		content: "PRODUCT NAME";
+	}
+	.table2 tbody tr td:nth-child(2):before {
+		content: "PRODUCT TYPE";
+	}
+	.table2 tbody tr td:nth-child(3):before {
+		content: "QUANTITY";
+	}
+	.table2 tbody tr td:nth-child(4):before {
+		content: "PRICE";
+	}
+	.table2 tbody tr td:nth-child(5):before {
+		content: "LAST PURCHASE DATE";
+	}
+}
+
+blockquote {
+	color: white;
+	text-align: center;
+}
+/* End of responsive table style */
+/* End of dashboard style */
+@media screen and (max-width: 768px) {
 	.attendant-block {
 		width: 70%;
+	}
+	#sidebar.active {
+		left: -200px;
+	}
+	#sidebar.show {
+		left: 0px;
+	}
+
+	#sidebar .toggle-btn span {
+		display: block;
+		width: 30px;
+		height: 5px;
+		background: #e15960;
+		margin: 5px 0px;
 	}
 }

@@ -12,7 +12,8 @@
 /* Page styling starts here */
 body {
 	font-family: Montserrat;
-	background: #e2e1e059;
+	/* background: #e2e1e059; */
+	background: #fefefe;
 }
 
 .left {
@@ -30,7 +31,6 @@ body {
 #logo {
 	padding: 1em 0em;
 	text-align: center;
-	border-bottom: 1px solid #ffffff78;
 	text-transform: capitalize;
 	color: #fefffe;
 }
@@ -60,6 +60,11 @@ body {
 	font-weight: 500;
 	padding: 15px 10px;
 	border-bottom: 1px solid #ffffff78;
+}
+
+#sidebar ul li:hover {
+	background: #fefffe;
+	color: #0b3954;
 }
 
 #sidebar .toggle-btn {
@@ -194,12 +199,12 @@ body {
 	padding-bottom: 2em;
 	justify-content: space-between;
 	border-bottom: 1px solid #ccc;
+	position: relative;
 }
 
 .container-title {
 	text-align: center;
 	background: #bcc9d0;
-	margin: 0 auto;
 	color: #fefefe;
 	width: 40%;
 	height: 50px;
@@ -208,6 +213,38 @@ body {
 	font-weight: 500;
 	margin-top: 2em;
 	padding-top: 0.5em;
+}
+
+.container-title:hover {
+	background: #214b63;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.view-all {
+	position: absolute;
+	right: 5%;
+	top: -25%;
+	width: 15%;
+	height: 50px;
+	text-align: center;
+	background: #bcc9d0;
+	color: #fefefe;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 2em;
+	padding-top: 0.5em;
+}
+
+.add-product {
+	top: -35%;
+	right: 0.5%;
+	width: 20%;
+}
+
+.view-all:hover {
+	background: #214b63;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 h2:nth-child(1) {
@@ -227,6 +264,15 @@ h2:nth-child(1) {
 	text-align: center;
 	font-size: 15px;
 	font-weight: 400;
+	color: #fefffe;
+	text-transform: capitalize;
+	padding-top: 0.5em;
+}
+
+.info-block-header h2 {
+	text-align: center;
+	font-size: 17px;
+	font-weight: 500;
 	color: #fefffe;
 	text-transform: capitalize;
 	padding-top: 0.5em;
@@ -262,7 +308,6 @@ h2:nth-child(1) {
 }
 
 .info-block-header5 {
-	width: initial;
 	padding: 0 0.5em;
 	background: #8b9dab;
 }
@@ -421,10 +466,68 @@ table th.r {
 	}
 }
 
-blockquote {
-	color: white;
-	text-align: center;
+#myInput {
+	background-image: url("/images/searchicon.png"); /* Add a search icon to input */
+	background-position: 10px 12px; /* Position the search icon */
+	background-repeat: no-repeat; /* Do not repeat the icon image */
+	width: 90%; /* Full-width */
+	font-size: 16px; /* Increase font-size */
+	padding: 12px 20px 12px 40px; /* Add some padding */
+	border: 1px solid #ddd; /* Add a grey border */
+	margin: 0 auto; /* Add some space below the input */
+	margin-top: 1em;
 }
+
+td button {
+	width: 80px;
+	height: 40px;
+	margin: 0.5em;
+	border-radius: 8px;
+	border: none;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.delete {
+	background: #ff6663;
+	color: #fefefe;
+	cursor: pointer;
+}
+
+.delete:hover {
+	color: #ff6663;
+	background: #fefefe;
+	border: 1px solid #ff6663;
+}
+
+.edit {
+	background: #b8d141;
+	color: #fefefe;
+	cursor: pointer;
+}
+
+.edit:hover {
+	color: #b8d141;
+	background: #fefefe;
+	border: 1px solid #b8d141;
+}
+
+.arrow-container {
+	position: relative;
+}
+
+.arrow-left {
+	position: absolute;
+	left: 190px;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+
+	border-right: 10px solid white;
+}
+
 /* End of responsive table style */
 /* End of dashboard style */
 @media screen and (max-width: 768px) {
